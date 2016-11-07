@@ -1,0 +1,40 @@
+<div class="f-container">
+    <md-card class="demo-card demo-basic l-p col-xs-2">
+        <div class="avatar-container">
+            <img [src]="src" [hidden]="src==''">
+        </div>
+        <div class="file-input">
+            Edit Profile Photo
+            <input type="file" image-upload (imageSelected)="selected($event)" [resizeOptions]="resizeOptions">
+        </div>
+        <a routerLink="/form">Edit Profile</a>
+
+    </md-card>
+    <md-card class="demo-card demo-basic r-p col-xs-10">
+        <md-toolbar color="primary" *ngIf="haveData!='' && haveData!=undifined && haveData!=null"> {{profile.firstName}} {{profile.lastName}}</md-toolbar>
+        <md-card-content class="profile">
+            <div class="have-data" *ngIf="haveData!='' && haveData!=undifined && haveData!=null">
+                <p>
+                    <span *ngIf="profile.firstName!='' || profile.lastName!='' ">I am Mr.<span class="b-v">{{profile.firstName}} {{profile.lastName}}</span></span>
+                    <span *ngIf="profile.age!=''"> and I am above <span class="b-v">{{profile.age}}</span> years</span>
+                    <span *ngIf="profile.emailId!=''">and you can send your emails to <span class="b-v">{{profile.emailId}}</span>.</span>
+                    <span *ngIf="profile.stateId!=''"> I lives in the state of <span class="b-v">{{profile.stateId}}</span>.</span>
+                    I like to play
+                    <span class="b-v" *ngFor="let intrest of profile.intrest; let i = index" [hidden]="lengthOfIntrest==i"> {{intrest.text}},</span>
+                    <span *ngIf="lengthOfIntrest>0"> and</span>
+                    <span *ngIf="lengthOfIntrest>0">  <span class="b-v">{{profile.intrest[lengthOfIntrest].text}}</span>.</span>
+                    <span *ngIf="profile.agreesToNews"> And please send me the news letters.</span>
+                    <span *ngIf="!profile.agreesToNews"> And please don't send the news letters.</span>
+                    <span *ngIf="profile.tel!=''">Please reach out to me my phone  <span class="b-v">{{profile.tel}}</span></span>
+                </p>
+                <md-card-actions class="action">
+                    <button md-raised-button color="primary" disableRipple="true" (click)="onAgree()">Agree</button>
+                    <div class="clear"></div>
+                </md-card-actions>
+            </div>
+            <div class="have-no-data" *ngIf="haveData=='' || haveData==undifined ">
+                Pleas fill the form and rerty <a routerLink="/form">Form</a></div>
+        </md-card-content>
+
+    </md-card>
+</div>

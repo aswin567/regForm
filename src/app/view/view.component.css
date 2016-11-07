@@ -1,0 +1,50 @@
+.f-container {
+  padding: 20px;
+  height: auto; }
+  .f-container .l-p {
+    width: 220px;
+    margin-right: 20px;
+    background: #fff;
+    height: 590px;
+    padding: 0;
+    padding-top: 30px;
+    text-align: center; }
+    .f-container .l-p .avatar-container {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 120px;
+      height: 120px;
+      border: 2px solid #eee;
+      margin: 0 auto;
+      margin-bottom: 18px; }
+    .f-container .l-p .file-input {
+      position: relative;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.4);
+      line-height: 35px;
+      cursor: pointer; }
+      .f-container .l-p .file-input input[type=file] {
+        position: absolute;
+        top: 1px;
+        left: 64px;
+        opacity: 0; }
+    .f-container .l-p a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.4); }
+  .f-container .r-p {
+    width: calc(100% - 241px);
+    background: #fff;
+    padding: 0;
+    padding-bottom: 20px; }
+    .f-container .r-p .profile {
+      padding: 9px 20px 0px; }
+      .f-container .r-p .profile .have-data p {
+        color: #777;
+        line-height: 23px; }
+        .f-container .r-p .profile .have-data p span[class="b-v"] {
+          color: #378486;
+          font-family: RobotoMedium; }
+    .f-container .r-p .action {
+      margin-left: 0; }
+
+/*# sourceMappingURL=view.component.css.map */

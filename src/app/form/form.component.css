@@ -1,0 +1,94 @@
+.f-container {
+  padding: 20px;
+  min-height: 100%;
+  height: auto;
+  background-image: url(../../assets/images/bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom; }
+  .f-container .l-p {
+    width: 220px;
+    margin-right: 20px;
+    background: #fff;
+    height: 590px;
+    padding: 0;
+    padding-top: 30px; }
+    .f-container .l-p .avatar-container {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 120px;
+      height: 120px;
+      border: 2px solid #eee;
+      margin: 0 auto;
+      margin-bottom: 18px; }
+    .f-container .l-p .file-input {
+      position: relative;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.4);
+      line-height: 11px;
+      cursor: pointer; }
+      .f-container .l-p .file-input i {
+        font-size: 18px; }
+      .f-container .l-p .file-input input[type=file] {
+        position: absolute;
+        top: 9px;
+        left: 53px;
+        opacity: 0; }
+  .f-container .r-p {
+    width: calc(100% - 241px);
+    background: #fff;
+    padding: 0;
+    padding-bottom: 20px;
+    min-height: 590px; }
+    .f-container .r-p .form-card {
+      margin-bottom: 4px;
+      margin-top: 4px; }
+    .f-container .r-p .rw {
+      margin-top: 5px; }
+      .f-container .r-p .rw pre {
+        background: transparent;
+        border: none;
+        font-family: RobotoMedium;
+        color: rgba(0, 0, 0, 0.4); }
+    .f-container .r-p .cent-width {
+      width: 100%; }
+    .f-container .r-p .slider {
+      position: relative; }
+      .f-container .r-p .slider::after {
+        content: '45+';
+        position: absolute;
+        top: 0;
+        right: 2px;
+        font-size: 11px; }
+      .f-container .r-p .slider::before {
+        content: '0';
+        position: absolute;
+        top: 0;
+        left: 2px;
+        font-size: 11px; }
+    .f-container .r-p .slider-value {
+      margin-top: -8px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.4); }
+      .f-container .r-p .slider-value span {
+        color: #009688; }
+    .f-container .r-p .label {
+      font-family: RobotoMedium;
+      color: rgba(0, 0, 0, 0.38);
+      font-size: 11px; }
+    .f-container .r-p .sel select {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+      padding: 8px 0px; }
+    .f-container .r-p .action {
+      width: 100%;
+      padding-bottom: 12px; }
+
+.invisble {
+  visibility: hidden; }
+
+/*# sourceMappingURL=form.component.css.map */

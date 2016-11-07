@@ -1,0 +1,61 @@
+.f-container{
+    padding: 20px;
+    height: auto;
+    .l-p{
+        width: 220px;
+        margin-right: 20px;
+        background: #fff;
+        height: 590px;
+        padding: 0;
+        padding-top: 30px;
+        text-align: center;
+        .avatar-container{
+         border-radius: 50%;
+        overflow: hidden;
+        width: 120px;
+        height: 120px;
+        border: 2px solid #eee;
+        margin: 0 auto;
+        margin-bottom: 18px;
+        }
+        .file-input{
+            position: relative;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.4);
+            line-height: 35px;
+            cursor: pointer;
+             input[type=file]{
+                position: absolute;
+                top: 1px;
+                left: 64px;
+                opacity: 0;
+             }
+        }
+        a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.4);
+        }
+    }
+    .r-p{
+        width: calc(100% - 241px);
+        background: #fff;
+        padding: 0;
+        padding-bottom: 20px;
+       .profile{
+           padding: 9px 20px 0px;
+           .have-data{
+               p{ 
+                    color: #777;
+                    line-height: 23px;
+                    span[class="b-v"]{
+                        color: #378486;
+                        font-family: RobotoMedium;
+                    }
+               }
+           }
+       }
+       .action{
+           margin-left: 0;
+       }  
+    }
+}

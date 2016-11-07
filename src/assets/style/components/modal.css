@@ -1,0 +1,14 @@
+.modal-content .modal-header {
+  background: #009688;
+  padding: 6px 10px;
+  font-size: 15px; }
+  .modal-content .modal-header button span {
+    color: #fff; }
+  .modal-content .modal-header h4 {
+    color: #fff;
+    font-size: 17px; }
+.modal-content .modal-body {
+  text-align: center;
+  padding: 37px; }
+
+/*# sourceMappingURL=modal.css.map */

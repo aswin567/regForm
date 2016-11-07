@@ -1,0 +1,120 @@
+$primary-color: #009688;
+$secondary-color: rgba(0, 0, 0, 0.38);
+$third-color: rgba(0, 0, 0, 0.4);
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+.f-container{
+    padding: 20px;
+    min-height: 100%;
+    height: auto;
+    background-image: url(../../assets/images/bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    .l-p{
+        width: 220px;
+        margin-right: 20px;
+        background: #fff;
+        height: 590px;
+        padding: 0;
+        padding-top:30px;
+        .avatar-container{
+            @include border-radius(50%);
+            overflow: hidden;
+            width: 120px;
+            height: 120px;
+            border: 2px solid #eee;
+            margin: 0 auto;
+            margin-bottom: 18px;
+        }
+        .file-input{
+            position: relative;
+            text-align: center;
+            color: $third-color;
+            line-height: 11px;
+            cursor: pointer;
+            i{
+            font-size: 18px;
+            }
+             input[type=file]{
+                position: absolute;
+                top: 9px;
+                left: 53px;
+                opacity: 0;
+             }
+        }
+    }
+    .r-p{
+        width: calc(100% - 241px);
+        background: #fff;
+        padding: 0;
+        padding-bottom: 20px;
+        min-height: 590px;
+        .form-card{
+            margin-bottom: 4px;
+            margin-top: 4px;            
+        }
+        .rw{
+            margin-top: 5px;
+            pre{
+                background: transparent;
+                border: none;
+                font-family: RobotoMedium;
+                color: $third-color;
+            }
+        }
+        .cent-width{
+            width: 100%;
+        }
+        .slider{
+            position: relative;
+            &::after{
+                content: '45+';
+                position: absolute;
+                top: 0;
+                right: 2px;
+                font-size: 11px;
+            }
+            &::before{
+                content: '0';
+                position: absolute;
+                top: 0;
+                left: 2px;
+                font-size: 11px;
+            }
+        }
+           .slider-value{
+               margin-top: -8px;
+               text-align: center;
+                color: $third-color;
+               span{
+                   color:$primary-color;
+               }
+           } 
+        .label{
+            font-family: RobotoMedium;
+            color:$secondary-color;
+            font-size: 11px;
+        }
+     .sel{
+         select{
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $secondary-color;
+            padding: 8px 0px;
+         }
+     }
+     .action{
+         width: 100%;
+         padding-bottom: 12px;
+     }   
+    }
+}
+
+.invisble{
+    visibility: hidden;
+}

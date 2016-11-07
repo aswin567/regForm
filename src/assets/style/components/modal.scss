@@ -1,0 +1,25 @@
+$primary-color: #009688;
+$secondary-color: rgba(0, 0, 0, 0.38);
+$third-color: rgba(0, 0, 0, 0.4);
+
+.modal-content{
+
+ .modal-header{
+    background:$primary-color;
+    padding: 6px 10px;
+    font-size: 15px;
+     button{
+         span{
+          color:#fff;
+         }
+     }
+     h4{
+       color: #fff;
+       font-size: 17px;
+     }
+ }
+ .modal-body{
+    text-align: center;
+    padding: 37px;
+ }   
+}

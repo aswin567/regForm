@@ -1,0 +1,145 @@
+<div class="f-container">
+  <md-card class="demo-card demo-basic l-p col-xs-2">
+    <div class="avatar-container">
+      <img [src]="src" [hidden]="imagePath==''">
+    </div>
+    <div class="file-input">
+      <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+      <p>Upload your photo</p>
+      <input type="file" image-upload (imageSelected)="selectedImg($event)" [resizeOptions]="resizeOptions">
+    </div>
+  </md-card>
+  <md-card class="demo-card demo-basic r-p col-xs-10">
+    <md-toolbar color="primary">Register Form</md-toolbar>
+    <md-card-content class="form-card">
+      <form #regForm="ngForm">
+        <div class="col-xs-12 rw">
+          <div class="col-xs-12 col-sm-6 col-md-6 pl-0">
+            <md-input class="cent-width" placeholder="First Name" [(ngModel)]="form.firstName" name="firstName" #firstName="ngModel"
+              required maxlength="20" (keypress)="charactersOnly($event)">
+            </md-input>
+            <span class="error-msg" *ngIf="firstName.invalid&&submited">This field is required</span>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 pr-0">
+            <md-input class="cent-width" placeholder="Last Name" [(ngModel)]="form.lastName" name="lastName" #lastName="ngModel" required
+              maxlength="20" (keypress)="charactersOnly($event)">
+            </md-input>
+            <span class="error-msg" *ngIf="firstName.invalid&&submited">This field is required</span>
+          </div>
+        </div>
+        <div class="col-xs-12 rw">
+          <div class="col-xs-12 pr-0 pl-0">
+            <div class="label">Age</div>
+            <md-slider class="cent-width slider" color="primary" min="1" max="45" #slider tick-interval="4" step="3" [(ngModel)]="form.age"
+              name="age" #age="ngModel"></md-slider>
+            <div class="slider-value"> I am <span>{{slider.value}}</span><span *ngIf="slider.value=='45'">+</span> years old</div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 rw">
+          <div class="col-xs-12 col-sm-6 col-md-6 pl-0">
+            <md-input type="Email" class="cent-width" placeholder="Email Id" [(ngModel)]="form.emailId" name="emailId" #emailId="ngModel"
+              maxlength="25">
+            </md-input>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 pr-0">
+            <md-input class="cent-width" placeholder="Telephone Number" [(ngModel)]="form.tel" name="tel" #tel="ngModel" maxlength="12"
+              (keypress)="numbersOnly($event)">
+            </md-input>
+          </div>
+        </div>
+        <div class="col-xs-12 rw mt-05">
+          <div class="col-xs-12 col-sm-6 col-md-6 pl-0 sel">
+            <div class="label" [class.invisble]="form.stateId==''">State</div>
+            <select [(ngModel)]="form.stateId" name="stateId" #stateId="ngModel">
+        <option value="">Select State</option>
+        <option value="Alaska">Alaska</option>
+        <option value="Newyork">Newyork</option>
+      </select>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 pr-0 sel">
+            <div class="label" [class.invisble]="form.countryId==''">Country</div>
+            <select [(ngModel)]="form.countryId" name="countryId" #countryId="ngModel">
+        <option value="">Select Country</option>
+        <option value="USA">USA</option>
+        <option value="India">India</option>
+      </select>
+          </div>
+        </div>
+        <div class="col-xs-12 rw mt-15">
+          <div class="col-xs-12 col-sm-6 col-md-6 pl-0 sel">
+            <div class="label" [class.invisble]="form.addressId==''">Address</div>
+            <select [(ngModel)]="form.addressId" name="addressId" #addressId="ngModel">
+        <option value="">Select Address</option>
+        <option value="1">Home</option>
+        <option value="2">Work</option>
+      </select>
+          </div>
+        </div>
+        <div class="col-xs-12 rw mt-25" *ngIf="form.addressId=='1'">
+          <div class="col-xs-12 col-sm-6 col-md-6 pl-0">
+            <md-input class="cent-width" placeholder="Address 1" [(ngModel)]="form.haddress1" name="haddress1" #haddress1="ngModel" maxlength="30">
+            </md-input>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 pr-0">
+            <md-input class="cent-width" placeholder="Address 2" [(ngModel)]="form.haddress2" name="haddress2" #haddress2="ngModel" maxlength="30">
+            </md-input>
+          </div>
+        </div>
+
+        <div class="col-xs-12 rw  mt-25" *ngIf="form.addressId=='2'">
+          <div class="col-xs-12 col-sm-6 col-md-6 pl-0">
+            <md-input type="Email" class="cent-width" placeholder="Company Address 1" [(ngModel)]="form.caddress1" name="caddress1" #caddress1="ngModel"
+              maxlength="30">
+            </md-input>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 pr-0">
+            <md-input class="cent-width" placeholder="Company Address 2" [(ngModel)]="form.caddress2" name="caddress2" #caddress2="ngModel"
+              maxlength="30">
+            </md-input>
+          </div>
+        </div>
+        <div class="col-xs-12 rw mt-25">
+          <div class="col-xs-12  pr-0  pl-0">
+            <div class="label">Interests</div>
+            <ng-select (data)="value" [multiple]="true" [items]="items" [disabled]="disabled" (data)="onRefreshValue($event)" (selected)="onSelected($event)"
+              (removed)="onRemoved($event)" placeholder="Interests" value="name"></ng-select>
+            <pre *ngIf="itemsToString(value)!=''">{{itemsToString(value)}}</pre>
+          </div>
+        </div>
+        <div class="col-xs-12 rw  mt-25">
+          <div class="col-xs-8 pl-0">
+            <md-checkbox [(ngModel)]="form.agreesToNews" name="newsLetter" #newsLetter="ngModel">
+              Subscribe the news letter.
+            </md-checkbox>
+          </div>
+          <div class="col-xs-4 pr-0">
+            <button md-raised-button color="primary" disableRipple="true" class="pull-right" (click)="onSubmit(regForm)">Submit</button>
+          </div>
+        </div>
+      </form>
+      <div class="clear"></div>
+    </md-card-content>
+
+  </md-card>
+
+  <div class="clear"></div>
+</div>
+
+
+
+<div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="smModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Hey!!</h4>
+      </div>
+      <div class="modal-body">
+        {{infoMsg}}
+      </div>
+    </div>
+  </div>
+</div>

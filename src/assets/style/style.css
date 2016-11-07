@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#Roboto-Bold") format("svg"); }
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url("../fonts/roboto/Roboto-Regular.eot");
+  src: url("../fonts/roboto/Roboto-Regular.eot") format("embedded-opentype"), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regular.woff") format("woff"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype"), url("../fonts/roboto/Roboto-Regular.svg#Roboto-Regular") format("svg"); }
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url("../fonts/roboto/Roboto-Medium.eot");
+  src: url("../fonts/roboto/Roboto-Medium.eot") format("embedded-opentype"), url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/roboto/Roboto-Medium.woff") format("woff"), url("../fonts/roboto/Roboto-Medium.ttf") format("truetype"), url("../fonts/roboto/Roboto-Medium.svg#Roboto-Medium") format("svg"); }
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+html, html a {
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: 'RobotoRegular' !important;
+  font-weight: 400;
+  background: #eee; }
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+html, body {
+  height: 100%; }
+
+.clear {
+  clear: both !important; }
+
+.p-0 {
+  padding: 0 !important; }
+
+.mt-25 {
+  margin-top: 25px !important; }
+
+.mt-05 {
+  margin-top: 05px !important; }
+
+.mt-15 {
+  margin-top: 15px !important; }
+
+.avatar-container {
+  background: url(../images/bgNoDp.png);
+  background-size: cover; }
+
+@media screen and (min-width: 767px) {
+  .pr-0 {
+    padding-right: 0 !important; }
+
+  .pl-0 {
+    padding-left: 0 !important; } }
+
+/*# sourceMappingURL=style.css.map */
